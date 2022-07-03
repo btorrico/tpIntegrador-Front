@@ -1,0 +1,76 @@
+<div class="container">
+  <mat-toolbar>
+    <span>Registro de Vendedor</span>
+  </mat-toolbar>
+<div class="col-md-6 offset-md-3">
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+      <label> Nombre: </label>
+      <input type="text" class="form-control" id="nombre"  [(ngModel)]="vendedor.nombre" name="nombre" required minlength="4" maxlength="10" placeholder="Ingrese su nombre" #nombre="ngModel"> <!--Relaciona a un vendedor con su atributo cuando se llena el form se hace el post del vendedor-->
+  <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+  <div *ngIf="nombre.errors?.['required']">
+         Ingrese su nombre por favor
+  </div>
+  <div *ngIf="nombre.errors?.['minlength']">
+    El nombre tiene que contener como minimo 4 caracteres
+</div>
+<div *ngIf="nombre.errors?.['maxlength']">
+El nombre tiene que contener como maximo 10 caracteres
+</div>
+  </div>
+    </div>
+
+  <div class="form-group">
+    <label> Apellido: </label> <!-- NgModel captura todos los errores!-->
+    <input type="text" class="form-control" id="apellido"  [(ngModel)]="vendedor.apellido" name="apellido"  required minlength="4" maxlength="10" placeholder="Ingrese su apellido" #apellido="ngModel"> <!--Relaciona a un vendedor con su atributo cuando se llena el form se hace el post del vendedor-->
+    <div class="alert alert-danger" *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)">
+    <div *ngIf="apellido.errors?.['required']">
+           Ingrese su apellido por favor
+    </div>
+    <div *ngIf="apellido.errors?.['minlength']">
+      El apellido tiene que contener como minimo 4 caracteres
+</div>
+<div *ngIf="apellido.errors?.['maxlength']">
+  El apellido tiene que contener como maximo 10 caracteres
+</div>
+    </div>
+</div>
+
+<div class="form-group">
+  <label> Direccion: </label>
+  <input type="text" class="form-control" id="direccion"  [(ngModel)]="vendedor.direccion" name="direccion"  requird minlength="4" maxlength="35" placeholder="Ingrese su direccion" #direccion="ngModel">
+  <div class="alert alert-danger" *ngIf="direccion.invalid && (direccion.dirty || direccion.touched)">
+    <div *ngIf="direccion.errors?.['required']">
+           Ingrese su direccion por favor
+    </div>
+    <div *ngIf="apellido.errors?.['minlength']">
+      La direccion tiene que contener como minimo 4 caracteres
+</div>
+<div *ngIf="apellido.errors?.['maxlength']">
+  La direccion tiene que contener como maximo 35 caracteres
+</div>
+    </div>
+</div>
+
+<div class="form-group">
+<label> Documento: </label>
+<input type="text" class="form-control" id="telefono"  [(ngModel)]="vendedor.documento" name="documento"  requird minlength="4" maxlength="8" placeholder="Ingrese su Nro. de documento" #documento="ngModel">
+<div class="alert alert-danger" *ngIf="documento.invalid && (documento.dirty || documento.touched)">
+  <div *ngIf="documento.errors?.['required']">
+         Ingrese su Nro. de documento por favor
+  </div>
+  <div *ngIf="documento.errors?.['minlength']">
+    La direccion tiene que contener como minimo 4 caracteres
+</div>
+<div *ngIf="documento.errors?.['maxlength']">
+La direccion tiene que contener como maximo 8 caracteres
+</div>
+  </div>
+</div>
+
+<button class="btn btn-success"> Guardar</button>
+
+</form>
+
+</div>
+</div>

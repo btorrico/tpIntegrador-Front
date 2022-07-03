@@ -1,0 +1,40 @@
+<div class="container">
+
+  <!--
+  <mat-toolbar>
+    <span>Productos</span>
+  </mat-toolbar>
+  -->
+  <div>
+  <h1>Productos</h1>
+  </div>
+  <table class="table table-striped">
+  <thead class="table-success">
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Stock</th>
+      <th>Categoria</th>
+      <th>Acciones</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let producto of productos"> <!--Recorremos la lista de productos de lista-productos.component.ts-->
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.descripcion}}</td>
+        <td>{{producto.cantStock}}</td>
+        <td>{{producto.categoria}}</td>
+
+
+        <td>
+          <button (click)="actualizarProducto(producto.id)" class="btn btn-success text-white">Editar</button>
+          <button (click)="eliminarProducto(producto.id)" class="btn btn-success" style="margin-left: 10px;">Eliminar</button>
+          <button (click)="verDetallesProducto(producto.id)" class="btn btn-success" style="margin-left: 10px;">Detalles</button>
+
+        </td>
+    </tr>
+  </tbody>
+  </table>
+  </div>

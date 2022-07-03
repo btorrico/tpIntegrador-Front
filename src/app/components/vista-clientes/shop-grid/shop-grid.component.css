@@ -1,0 +1,10 @@
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
+
+h6{
+  font-size: 1rem;
+}
+h5{
+  font-size: 1.25rem;
+}

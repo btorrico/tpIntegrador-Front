@@ -23,9 +23,22 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+
+              "src/styles.css",
+              "src/assets/css/style-main.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
+
+
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/@fortawesome/fontawesome-free/js/all.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery-nice-select/js/jquery.nice-select.js",
+              "node_modules/slicknav/dist/jquery.slicknav.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -90,6 +103,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -97,5 +111,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "70cbf9b6-b1ee-4edc-8dba-7fc1d2e257a3"
   }
 }

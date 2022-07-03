@@ -1,0 +1,121 @@
+
+    <!-- Hero Section Begin -->
+    <div  *ngIf="estaVisible">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../assets/img/hero/hero1.webp" class="d-block w-100" alt="carrusel-6">
+            </div>
+            <div class="carousel-item">
+              <img src="../assets/img/hero/hero2.webp" class="d-block w-100" alt="carrusel-5">
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/hero/hero3.webp" class="d-block w-100" alt="carrusel-2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/hero/hero4.webp" class="d-block w-100" alt="carrusel-3">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/hero/hero5.webp" class="d-block w-100" alt="carrusel-4">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/hero/hero6.webp" class="d-block w-100" alt="carrusel-7">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Hero Section End -->
+
+
+
+      <!-- Featured Section Begin -->
+      <section class="featured spad">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title">
+                <h2>Productos Destacados</h2>
+              </div>
+              <div class="featured__controls">
+                <ul>
+                  <li class="active" data-filter="*">Todos</li>
+                  <li data-filter=".oranges">Los mas buscados</li>
+                  <li data-filter=".fresh-meat">Nuestros preferidos</li>
+                  <li data-filter=".vegetables">Novedades</li>
+                  <li data-filter=".fastfood">Los mas vistos</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row featured__filter">
+
+            <div *ngFor="let producto of productos" class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+              <div class="featured__item">
+                <div class="featured__item__pic set-bg">
+                  <img class="featured__item__pic set-bg" src="/assets/img/featured/feature-3.jpg">
+                  <ul class="featured__item__pic__hover">
+                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                    <li (click)="agregar(producto)"><i class="fa fa-shopping-cart">Brenda</i></li>
+                  </ul>
+                </div>
+                <div class="featured__item__text">
+                  <h6><a href="#">{{producto.nombre}}</a></h6>
+                  <h5>{{producto.precio}}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Section End -->
+
+      <!-- Banner Begin -->
+      <div class="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="banner__pic">
+                <img class="textbanner-image-background lazyautosizes blur-up-huge lazyloaded"
+                  src="//d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-1136274208-1632371657-fb1bf13a81f47f7ba3c0f2a438f22a271632371657-50-0.webp?953421219"
+                  data-srcset="//d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-1136274208-1632371657-fb1bf13a81f47f7ba3c0f2a438f22a271632371657-480-0.webp?953421219 480w, //d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-1136274208-1632371657-fb1bf13a81f47f7ba3c0f2a438f22a271632371657-640-0.webp?953421219 640w"
+                  data-sizes="auto" data-expand="-10" alt="Banner de The Fresh Market ®" sizes="350px"
+                  srcset="//d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-1136274208-1632371657-fb1bf13a81f47f7ba3c0f2a438f22a271632371657-480-0.webp?953421219 480w, //d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-1136274208-1632371657-fb1bf13a81f47f7ba3c0f2a438f22a271632371657-640-0.webp?953421219 640w">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="banner__pic">
+                <img class="textbanner-image-background lazyautosizes blur-up-huge ls-is-cached lazyloaded"
+                  src="//d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-1949779549-1632371656-a2a16b4fefe7518d0eda503d1df154de1632371656-50-0.webp?953421219"
+                  data-srcset="//d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-1949779549-1632371656-a2a16b4fefe7518d0eda503d1df154de1632371656-480-0.webp?953421219 480w, //d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-1949779549-1632371656-a2a16b4fefe7518d0eda503d1df154de1632371656-640-0.webp?953421219 640w"
+                  data-sizes="auto" data-expand="-10" alt="Banner de The Fresh Market ®" sizes="350px"
+                  srcset="//d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-1949779549-1632371656-a2a16b4fefe7518d0eda503d1df154de1632371656-480-0.webp?953421219 480w, //d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-1949779549-1632371656-a2a16b4fefe7518d0eda503d1df154de1632371656-640-0.webp?953421219 640w">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="banner__pic">
+                <img class="textbanner-image-background lazyautosizes blur-up-huge lazyloaded"
+                  src="//d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-717881036-1632371654-793f94c5e82548fbf59f97ceebc0cf5b1632371655-50-0.webp?953421219"
+                  data-srcset="//d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-717881036-1632371654-793f94c5e82548fbf59f97ceebc0cf5b1632371655-480-0.webp?953421219 480w, //d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-717881036-1632371654-793f94c5e82548fbf59f97ceebc0cf5b1632371655-640-0.webp?953421219 640w"
+                  data-sizes="auto" data-expand="-10" alt="Banner de The Fresh Market ®" sizes="350px"
+                  srcset="//d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-717881036-1632371654-793f94c5e82548fbf59f97ceebc0cf5b1632371655-480-0.webp?953421219 480w, //d3ugyf2ht6aenh.cloudfront.net/stores/001/434/490/themes/amazonas/1-img-717881036-1632371654-793f94c5e82548fbf59f97ceebc0cf5b1632371655-640-0.webp?953421219 640w">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Banner End -->

@@ -1,0 +1,14 @@
+.example-icon{
+  color: white;
+  background-color: rgb(141, 194, 111);
+  border: none;
+
+}
+
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
+
+a{
+  color: rgb(21, 16, 16);
+}
