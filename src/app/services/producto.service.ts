@@ -11,7 +11,7 @@ import { Producto } from './Producto';
 export class ProductoService {
 
   //Url para obtener el listado de productos
-  private baseURL = "http://localhost:8080/api/productos";
+  private baseURL = "https://torrico-tpintegrador.herokuapp.com/api/productos";
 
   private carrito = [];
   total: number =0;

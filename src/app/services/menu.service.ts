@@ -10,7 +10,7 @@ import { Vendedor } from './Vendedor';
 export class MenuService {
 
   //Url para obtener el listado de vendedores
-  private baseURL = "http://localhost:8080/api/vendedores";
+  private baseURL = "https://torrico-tpintegrador.herokuapp.com/api/vendedores";
 
   constructor(private httpClient: HttpClient) { }
 

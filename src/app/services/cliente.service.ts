@@ -10,7 +10,7 @@ import { Cliente } from './Cliente';
 export class ClienteService {
 
   //Url para obtener el listado de cliente
-  private baseURL = "http://localhost:8080/api/clientes";
+  private baseURL = "https://torrico-tpintegrador.herokuapp.com/api/clientes";
 
   constructor(private httpClient: HttpClient) { }
 
