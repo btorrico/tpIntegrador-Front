@@ -31,16 +31,16 @@ export class LoginComponent implements OnInit {
 
     const usuario = this.form.value.usuario;
     const password = this.form.value.password;
-
-    if(usuario == "admin" && password == "admin"){
+//Vista Administrador
+    if(usuario == "luisH" && password == "123"){
 
        this.router.navigateByUrl('/dashboard');
     }
     // Redirecciona panel vendedores
-      else if(usuario == "lauriS" && password == "lauri27"){
+      else if(usuario == "lauraS" && password == "1234"){
         this.router.navigateByUrl('/vista-vendedor');
        }
-    else if(usuario == "mariatc" && password == "1234"){
+    else if(usuario == "mariaT" && password == "12345"){
        this.router.navigateByUrl('/vista-clientes');
        //Redireccionamos pantalla de compra
   }else{
