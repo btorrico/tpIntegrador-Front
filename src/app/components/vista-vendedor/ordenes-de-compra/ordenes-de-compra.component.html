@@ -1,0 +1,49 @@
+
+<div class="container" >
+
+  <mat-toolbar>
+  <span>Ordenes de Compra</span>
+</mat-toolbar>
+
+  <table class="table table-striped">
+  <thead class="table-success">
+    <tr>
+      <th>Items De Compra</th>
+      <th>Fecha</th>
+      <th>Subtotal</th>
+      <th>Total</th>
+
+      <th>Acciones</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let orden of ordenes"> <!--Recorremos la lista de ordenes de compra-->
+        <td>{{orden.itemsDeCompra}}</td>
+        <td>{{orden.fecha}}</td>
+        <td>{{orden.subtotal}}</td>
+        <td>{{orden.total}}</td>
+
+
+
+        <td>
+          <!--
+          <div>
+          <button (click)="actualizarOrden(orden.id)" class="btn btn-success text-white"style="margin: 2px;">Editar</button>
+         </div>
+        -->
+
+         <div>
+          <button (click)="eliminarOrden(orden.id)" class="btn btn-success" style="margin: 2px;">Eliminar</button>
+          </div>
+
+      <!--
+          <div>
+          <button (click)="verDetallesOrden(orden.id)" class="btn btn-success" style="margin: 2px;">Detalles</button>
+          </div>
+       -->
+        </td>
+    </tr>
+  </tbody>
+  </table>
+  </div>

@@ -1,5 +1,7 @@
 <div class="col-md-6 offset-md-3">
-  <h3 class="text-center">Modificacion de Producto</h3>
+  <mat-toolbar>
+    <span>Modificación de Productos</span>
+  </mat-toolbar>
   <form (ngSubmit)= "onSubmit()" #productoForm = "ngForm">
     <div class="form-group">
       <label>Nombre : </label>
@@ -176,10 +178,20 @@
     </div>
     <div class="mb-3 ">
       <label for="proveedor" class="col-form-label" col-sm-2>Proveedor</label>
+<!--
+        <select [(ngModel)]="producto.proveedor" class= "form-control" name="proveedor">
+
+          <option [ngValue]="undefined">--- Seleccionar un proveedor ---</option>
+          <option  [ngValue]="producto.proveedor">{{ producto.proveedor.nombre }}</option>
+
+
+        </select> -->
         <select [(ngModel)]="producto.proveedor" class= "form-control" name="proveedor">
           <option [ngValue]="undefined">--- Seleccionar un proveedor ---</option>
-          <option *ngFor="let proveedor of proveedores" [ngValue]="proveedor">{{proveedor.nombre}}</option>
+
+          <option *ngFor="let proveedor of proveedoresLista" [ngValue]="producto.proveedor">{{proveedor.nombre}}</option>
         </select>
+
     </div>
 
  <!-- Email
@@ -205,6 +217,6 @@
       </div>
     </div> -->
 
-    <button class="btn btn-success" [disabled]= "!productoForm.form.valid">Guardar</button>
+    <button class="btn btn-success">Guardar</button>
   </form>
 </div>

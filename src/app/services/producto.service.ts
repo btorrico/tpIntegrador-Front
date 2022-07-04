@@ -13,10 +13,11 @@ export class ProductoService {
   //Url para obtener el listado de productos
   private baseURL = "http://localhost:8080/api/productos";
 
-  private carrito;
+  private carrito = [];
+  total: number =0;
 
   constructor(private httpClient: HttpClient) {
-    alert('Ejecutando cosntructor');
+   // alert('Ejecutando cosntructor');
    }
 
   //Este metodo sirve para obtener a los productos
@@ -44,13 +45,29 @@ export class ProductoService {
   return this.httpClient.delete(`${this.baseURL}/${id}`);
 }
 
+
+//----- Carrito de compra
 agregarProductoACarrito(producto:Producto){
-  alert('producto: ' + producto.nombre);
+  alert('Se agrego '  + producto.nombre + ' al carrito de compra');
   this.carrito.push(producto);
 }
 
 getCarrito(){
-  alert('carrito: ' + this.carrito);
+ // alert('carrito: ' + this.carrito);
     return this.carrito;
 }
+
+calcularTotalCarrito() :number{
+
+ //return 'hola';
+ this.carrito.forEach(producto => {
+    this.total +=  producto.precio;
+  });
+  return this.total;
+}
+
+precioTotalCarrito(){
+  return this.total;
+}
+
 }

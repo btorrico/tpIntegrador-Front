@@ -115,8 +115,8 @@
         <label>Precio : </label>
         <input type = "number"
         class="form-control"
-        id = "precioPesos"
-        [(ngModel)] = "producto"
+        id = "precio"
+        [(ngModel)] = "producto.precio"
         name = "precio"
         required
         minlength="1"
@@ -154,7 +154,7 @@
 
       <div class="form-group">
         <label>Imagen : </label>
-        <input type = "url"
+        <input type = "text"
         class="form-control"
         id = "imagen"
         [(ngModel)] = "producto.imagen"
@@ -183,7 +183,8 @@
         <label for="proveedor" class="col-form-label" col-sm-2>Proveedor</label>
           <select [(ngModel)]="producto.proveedor" class= "form-control" name="proveedor">
             <option [ngValue]="undefined">--- Seleccionar un proveedor ---</option>
-            <option *ngFor="let proveedor of proveedores" [ngValue]="proveedor">{{proveedor.nombre}}</option>
+
+            <option *ngFor="let proveedor of proveedoresLista" [ngValue]="producto.proveedor">{{proveedor.nombre}}</option>
           </select>
       </div>
 
@@ -211,7 +212,7 @@
         </div>
       </div> -->
 
-      <button class="btn btn-success" [disabled]= "!productoForm.form.valid">Guardar</button>
+      <button class="btn btn-success" >Guardar</button>
     </form>
   </div>
 

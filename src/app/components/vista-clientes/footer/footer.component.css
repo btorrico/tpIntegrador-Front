@@ -1,3 +1,7 @@
 a:link, a:visited, a:active {
   text-decoration:none;
 }
+h6{
+  font-size: 17px;
+  margin-left: 25px;
+}

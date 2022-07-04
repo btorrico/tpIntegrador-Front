@@ -10,7 +10,6 @@ import { VisibilidadInicioService } from './visibilidad/visibilidad-inicio.servi
   changeDetection: ChangeDetectionStrategy.Default
 })
 export class InicioComponent implements OnInit {
-
     estaVisible: boolean;
     public productos = [];
 
@@ -32,10 +31,13 @@ export class InicioComponent implements OnInit {
       this.productos = dato;
 
     });
+
   }
     agregar(producto){
-      alert('producto: ' + producto.nombre);
+     // alert('producto: ' + producto.nombre);
       this.productoService.agregarProductoACarrito(producto);
 
     }
+
+
 }

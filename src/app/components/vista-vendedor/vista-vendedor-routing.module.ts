@@ -5,14 +5,15 @@ import { ProductosComponent } from './productos/productos.component';
 import { ActualizarProductoComponent } from './actualizar-producto/actualizar-producto.component';
 import { ProductoDetallesComponent } from './producto-detalles/producto-detalles.component';
 import { NgModule } from '@angular/core';
-import { InicioVendedorComponent } from './inicio-vendedor/inicio-vendedor.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { OrdenesDeCompraComponent } from './ordenes-de-compra/ordenes-de-compra.component';
 //import { InicioVendedorComponent } from './inicio-vendedor/inicio-vendedor.component';
 
 const routes: Routes = [
     { path: '', component: VistaVendedorComponent, children: [
-      { path: '', component: InicioVendedorComponent },
+      { path: '', component: InicioComponent },
        {path: 'productos',component:ProductosComponent},
-     //  {path: 'ordenes',component:OrdenesComponent},
+      {path: 'ordenes',component:OrdenesDeCompraComponent},
       { path: 'aniadirProductos', component: ReportesComponent },
       {path: 'producto-detalles/:id',component:ProductoDetallesComponent},
       {path: 'actualizar-producto/:id',component:ActualizarProductoComponent},

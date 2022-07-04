@@ -17,6 +17,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { OrdenesDeCompraComponent } from './ordenes-de-compra/ordenes-de-compra.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     ActualizarProductoComponent,
     ProductoDetallesComponent,
     VistaVendedorComponent,
+    OrdenesDeCompraComponent,
+    InicioComponent,
     
 
 

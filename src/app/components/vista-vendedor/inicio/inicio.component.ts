@@ -1,19 +1,17 @@
+import { Producto } from './../../../services/Producto';
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Producto } from 'src/app/services/Producto';
 import { ProductoService } from 'src/app/services/producto.service';
 import { Proveedor } from 'src/app/services/Proveedor';
 import { ProveedorService } from 'src/app/services/proveedor.service';
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio-vendedor.component.html',
-  styleUrls: ['./inicio-vendedor.component.css']
+  templateUrl: './inicio.component.html',
+  styleUrls: ['./inicio.component.css']
 })
 
-
-export class InicioVendedorComponent implements OnInit {
+export class InicioComponent implements OnInit {
   productos: Producto[];
   proveedores: Proveedor[];
 
@@ -25,7 +23,7 @@ export class InicioVendedorComponent implements OnInit {
   }
 
   actualizarProducto(id:number){
-    this.router.navigate(['dashboard/actualizar-producto',id]);
+    this.router.navigate(['vista-vendedor/actualizar-producto',id]);
   }
 
   eliminarProducto(id:number){
@@ -36,7 +34,7 @@ export class InicioVendedorComponent implements OnInit {
   }
 
   verDetallesProducto(id:number){
-  this.router.navigate(['dashboard/producto-detalles',id]);
+  this.router.navigate(['vista-vendedor/producto-detalles',id]);
   console.log("hola")
   }
 
@@ -52,3 +50,4 @@ export class InicioVendedorComponent implements OnInit {
     });
   }
 }
+

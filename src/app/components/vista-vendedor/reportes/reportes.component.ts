@@ -4,6 +4,7 @@ import { MenuService } from 'src/app/services/menu.service';
 import { Producto } from 'src/app/services/Producto';
 import { ProductoService } from 'src/app/services/producto.service';
 import { Proveedor } from 'src/app/services/Proveedor';
+import { ProveedorService } from 'src/app/services/proveedor.service';
 import { Vendedor } from 'src/app/services/Vendedor';
 
 
@@ -17,11 +18,15 @@ export class ReportesComponent implements OnInit {
 
   producto : Producto = new Producto();
   proveedores:Proveedor[];
+  proveedoresLista: any;
 
-  constructor(private productoServicio:ProductoService,private router:Router) { }
+  constructor(private productoServicio:ProductoService,private router:Router,private proveedorServicio:ProveedorService) { }
 
   ngOnInit(): void {
     console.log(this.producto);
+    this.proveedorServicio.obtenerListaProveedores().subscribe((data:any)=>{
+      this.proveedoresLista=data;
+    })
   }
 
   guardarProducto(){
@@ -33,13 +38,17 @@ export class ReportesComponent implements OnInit {
   }
 
   irALaListaDeProductos(){
-    this.router.navigate( ['/productos']);
+    this.router.navigate( ['/vista-vendedor']);
   }
 
   onSubmit(){ // imprime los datos del vendedor que se registra
     this.guardarProducto();
   }
 
-
+  private obtenerProveedores() {
+    this.proveedorServicio.obtenerListaProveedores().subscribe(dato => {
+      this.proveedores = dato;
+    });
+  }
 }
 
